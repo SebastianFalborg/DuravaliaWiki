@@ -1,0 +1,170 @@
+[
+	{
+		"name": "Nyfort",
+		"description": "Fortet hvor Fyrsten bor",
+		"xStartCoordinate": 190,
+		"yStartCoordinate": 335,
+		"xEndCoordinate": 310,
+		"yEndCoordinate": 440
+	},
+	{
+		"name": "Mina",
+		"description": "",
+		"xStartCoordinate": 358,
+		"yStartCoordinate": 337,
+		"xEndCoordinate": 432,
+		"yEndCoordinate": 391
+	},
+	{
+		"name": "Nordhavn",
+		"description": "",
+		"xStartCoordinate": 236,
+		"yStartCoordinate": 460,
+		"xEndCoordinate": 324,
+		"yEndCoordinate": 548
+	},
+	{
+		"name": "Vester Tårnby",
+		"description": "",
+		"xStartCoordinate": 554,
+		"yStartCoordinate": 380,
+		"xEndCoordinate": 625,
+		"yEndCoordinate": 439
+	},
+	{
+		"name": "Minen",
+		"description": "",
+		"xStartCoordinate": 383,
+		"yStartCoordinate": 276,
+		"xEndCoordinate": 453,
+		"yEndCoordinate": 334
+	},
+	{
+		"name": "Vagttårne",
+		"description": "",
+		"xStartCoordinate": 251,
+		"yStartCoordinate": 256,
+		"xEndCoordinate": 378,
+		"yEndCoordinate": 314
+	},
+	{
+		"name": "Orlak Tårnet",
+		"description": "",
+		"xStartCoordinate": 625,
+		"yStartCoordinate": 381,
+		"xEndCoordinate": 668,
+		"yEndCoordinate": 442
+	},
+	{
+		"name": "Den Nye Mine",
+		"description": "",
+		"xStartCoordinate": 660,
+		"yStartCoordinate": 273,
+		"xEndCoordinate": 742,
+		"yEndCoordinate": 350
+	},
+	{
+		"name": "Østertårnby",
+		"description": "",
+		"xStartCoordinate": 676,
+		"yStartCoordinate": 365,
+		"xEndCoordinate": 796,
+		"yEndCoordinate": 467
+	},
+	{
+		"name": "Baldaria",
+		"description": "",
+		"xStartCoordinate": 906,
+		"yStartCoordinate": 417,
+		"xEndCoordinate": 991,
+		"yEndCoordinate": 475
+	},
+	{
+		"name": "Den Gamle Mine",
+		"description": "",
+		"xStartCoordinate": 997,
+		"yStartCoordinate": 368,
+		"xEndCoordinate": 1071,
+		"yEndCoordinate": 442
+	},
+	{
+		"name": "Baldafort",
+		"description": "",
+		"xStartCoordinate": 953,
+		"yStartCoordinate": 476,
+		"xEndCoordinate": 1042,
+		"yEndCoordinate": 538
+	},
+	{
+		"name": "Det Sydlige Daria",
+		"description": "",
+		"xStartCoordinate": 932,
+		"yStartCoordinate": 570,
+		"xEndCoordinate": 997,
+		"yEndCoordinate": 612
+	},
+	{
+		"name": "Smalsted Bro",
+		"description": "",
+		"xStartCoordinate": 415,
+		"yStartCoordinate": 476,
+		"xEndCoordinate": 506,
+		"yEndCoordinate": 543
+	},
+	{
+		"name": "Mitihel",
+		"description": "",
+		"xStartCoordinate": 604,
+		"yStartCoordinate": 509,
+		"xEndCoordinate": 718,
+		"yEndCoordinate": 615
+	},
+	{
+		"name": "Flodsted",
+		"description": "",
+		"xStartCoordinate": 757,
+		"yStartCoordinate": 540,
+		"xEndCoordinate": 877,
+		"yEndCoordinate": 647
+	},
+	{
+		"name": "Læganker Havneby",
+		"description": "",
+		"xStartCoordinate": 343,
+		"yStartCoordinate": 584,
+		"xEndCoordinate": 471,
+		"yEndCoordinate": 686
+	},
+	{
+		"name": "Nåk",
+		"description": "",
+		"xStartCoordinate": 488,
+		"yStartCoordinate": 635,
+		"xEndCoordinate": 567,
+		"yEndCoordinate": 695
+	},
+	{
+		"name": "Nordre Bakkedal",
+		"description": "",
+		"xStartCoordinate": 553,
+		"yStartCoordinate": 698,
+		"xEndCoordinate": 706,
+		"yEndCoordinate": 751
+	},
+	{
+		"name": "Sønder Bakkedal",
+		"description": "",
+		"xStartCoordinate": 662,
+		"yStartCoordinate": 755,
+		"xEndCoordinate": 813,
+		"yEndCoordinate": 807
+	},
+	{
+		"name": "Smagskul",
+		"description": "",
+		"xStartCoordinate": 904,
+		"yStartCoordinate": 720,
+		"xEndCoordinate": 983,
+		"yEndCoordinate": 771
+	}
+]

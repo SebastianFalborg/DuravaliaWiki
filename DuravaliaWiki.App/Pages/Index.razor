@@ -1,0 +1,78 @@
+﻿@page "/"
+@inject HttpClient Http
+@inject IModalService Modal
+
+
+@if (places == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<MediaQuery Media="@Breakpoints.XLargeUp">
+		<Matched>
+			<img src="images/Duravalia1000.png" alt="usemap" usemap="#mapparts1000" />
+			<map name="mapparts1000">
+				@foreach (var place in places)
+				{
+					<area shape="rect" coords="@place.XStartCoordinate,@place.YStartCoordinate,@place.XEndCoordinate,@place.YEndCoordinate" alt="link"
+						  href="" @onclick="@(() => ShowPlace(place.Name))" @onclick:preventDefault />
+				}
+			</map>
+		</Matched>
+	</MediaQuery>
+
+	<MediaQuery Media="@Breakpoints.OnlyLarge">
+		<Matched>
+			<img src="images/Duravalia750.png" alt="usemap" usemap="#mapparts750" />
+			<map name="mapparts750">
+				@foreach (var place in places)
+				{
+					<area shape="rect" coords="@ScaleCoordinate(place.XStartCoordinate, 75),@ScaleCoordinate(place.YStartCoordinate, 75),@ScaleCoordinate(@place.XEndCoordinate, 75),@ScaleCoordinate(@place.YEndCoordinate, 75)" alt="link"
+						  href="" @onclick="@(() => ShowPlace(place.Name))" @onclick:preventDefault />
+				}
+			</map>
+		</Matched>
+	</MediaQuery>
+
+	<MediaQuery Media="@Breakpoints.MediumDown">
+		<Matched>
+			<img src="images/Duravalia500.png" alt="usemap" usemap="#mapparts500" />
+			<map name="mapparts500">
+				@foreach (var place in places)
+				{
+					<area shape="rect" coords="@ScaleCoordinate(place.XStartCoordinate, 50),@ScaleCoordinate(place.YStartCoordinate, 50),@ScaleCoordinate(@place.XEndCoordinate, 50),@ScaleCoordinate(@place.YEndCoordinate, 50)" alt="link"
+						  href="" @onclick="@(() => ShowPlace(place.Name))" @onclick:preventDefault />
+				}
+			</map>
+		</Matched>
+	</MediaQuery>
+}
+
+@code{
+	private Place[] places;
+
+	protected override async Task OnInitializedAsync()
+	{
+		places = await Http.GetFromJsonAsync<Place[]>("data/places.json");
+	}
+
+	async Task ShowPlace(string placeName)
+	{
+		var place = places.FirstOrDefault(x => x.Name == placeName);
+
+		var parameters = new ModalParameters();
+		parameters.Add(nameof(PlaceModal.place), place);
+
+		var options = new ModalOptions { HideCloseButton = true };
+
+		var placeForm = Modal.Show<PlaceModal>(place.Name, parameters, options);
+		var result = await placeForm.Result;
+	}
+
+	private decimal ScaleCoordinate(int coordinate, int scale)
+	{
+		var scaledCoordinate = (decimal)coordinate / 100 * scale;
+		return scaledCoordinate;
+	}
+}

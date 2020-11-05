@@ -1,0 +1,35 @@
+﻿@page "/places/{placeName}"
+@inject HttpClient Http
+
+
+@if (place == null)
+{
+	<p><em>Loading...</em></p>
+}
+else
+{
+	<h1>@place.Name</h1>
+
+	<p>@place.Description</p>
+}
+
+
+@code {
+	[Parameter]
+	public string PlaceName
+	{
+		get { return placeName.Replace('_', ' '); }
+		set { placeName = value; }
+	}
+
+	private string placeName;
+	private Place place;
+
+	protected override async Task OnInitializedAsync()
+	{
+		var places = await Http.GetFromJsonAsync<Place[]>("data/places.json");
+
+		place = places.FirstOrDefault(x => x.Name == PlaceName);
+	}
+
+}

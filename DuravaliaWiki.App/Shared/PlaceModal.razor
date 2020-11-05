@@ -1,0 +1,17 @@
+﻿@inject NavigationManager NavigationManager
+
+<div>
+	<p>@place.Description</p>
+
+	<button @onclick="NavigateToPlacePage" class="btn btn-primary">Læs mere om dette sted</button>
+</div>
+
+@code { [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; }
+
+	[Parameter] public Place place { get; set; }
+
+	private void NavigateToPlacePage()
+	{
+		NavigationManager.NavigateTo($"places/{place.Name}");
+	}
+}
